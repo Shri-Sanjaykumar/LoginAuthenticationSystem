@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: login-app
-        image: yourdockerhubusername/login-app:latest
+        image: shrisanjaykumar/login-app:latest
 ---
 apiVersion: v1
 kind: Service
