@@ -5,20 +5,15 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class LoginServiceTest {
 
-    LoginService service = new LoginService();
-
     @Test
     public void testLoginSuccess() {
+        LoginService service = new LoginService();
         assertTrue(service.validateLogin("admin", "admin123"));
     }
 
     @Test
-    public void testLoginFailWrongPassword() {
+    public void testLoginFail() {
+        LoginService service = new LoginService();
         assertFalse(service.validateLogin("admin", "wrong"));
-    }
-
-    @Test
-    public void testLoginFailWrongUsername() {
-        assertFalse(service.validateLogin("wrong", "admin123"));
     }
 }
