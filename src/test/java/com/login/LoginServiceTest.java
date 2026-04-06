@@ -6,13 +6,13 @@ import static org.junit.jupiter.api.Assertions.*;
 public class LoginServiceTest {
 
     @Test
-    public void testLoginSuccess() {
+    public void testValidLogin() {
         LoginService service = new LoginService();
         assertTrue(service.validateLogin("admin", "admin123"));
     }
 
     @Test
-    public void testLoginFail() {
+    public void testInvalidLogin() {
         LoginService service = new LoginService();
         assertFalse(service.validateLogin("admin", "wrong"));
     }
